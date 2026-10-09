@@ -1,0 +1,141 @@
+/* ===========================================================
+   TastyBites — Custom Stylesheet
+   Loaded AFTER Bootstrap 5.3. Overrides + brand utilities.
+   =========================================================== */
+
+/* ---------- Brand Tokens ---------- */
+:root {
+    --tb-primary: #8B2E2E;
+    --tb-primary-dark: #6E2222;
+    --tb-accent: #D4A24C;
+    --tb-bg-soft: #FAF6F0;
+    --tb-text-dark: #2C2C2C;
+    --tb-text-muted: #6c757d;
+
+    --bs-primary: var(--tb-primary);
+    --bs-primary-rgb: 139, 46, 46;
+}
+
+/* ---------- Base ---------- */
+body {
+    background: var(--tb-bg-soft);
+    color: var(--tb-text-dark);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background-color: var(--tb-primary) !important;
+}
+.navbar .navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+    background-color: var(--tb-primary);
+    border-color: var(--tb-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--tb-primary-dark);
+    border-color: var(--tb-primary-dark);
+}
+.btn-outline-primary {
+    color: var(--tb-primary);
+    border-color: var(--tb-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--tb-primary);
+    border-color: var(--tb-primary);
+    color: #fff;
+}
+
+/* ---------- Hero ---------- */
+.tb-hero {
+    background: linear-gradient(135deg, var(--tb-primary), var(--tb-primary-dark));
+    margin: -1.5rem -12px 2rem -12px;
+    padding: 4rem 1rem;
+    border-radius: 0;
+}
+.tb-hero h1 {
+    letter-spacing: 1px;
+}
+
+/* ---------- Menu cards ---------- */
+.menu-card {
+    border: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+    background-color: #fff;
+}
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+.menu-card img.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.menu-card .price {
+    font-weight: 700;
+    color: var(--tb-primary);
+    font-size: 1.15rem;
+}
+
+/* ---------- Category titles ---------- */
+.menu-category-title {
+    color: var(--tb-primary);
+    border-bottom: 3px solid var(--tb-accent);
+    padding-bottom: .25rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Generic price utility ---------- */
+.price {
+    font-weight: 700;
+    color: var(--tb-primary);
+}
+
+/* ---------- Footer ---------- */
+.tb-footer {
+    background: var(--tb-primary-dark);
+    color: #fff;
+    padding: 2rem 0 1rem;
+}
+.tb-footer h5,
+.tb-footer h6 {
+    color: var(--tb-accent);
+}
+.tb-footer hr {
+    border-color: rgba(255, 255, 255, .25);
+}
+
+/* ---------- Alert fade animation (used by main.js) ---------- */
+.alert.tb-fade-out {
+    transition: opacity .5s ease;
+    opacity: 0;
+}
+
+/* ---------- Forms ---------- */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--tb-primary);
+    box-shadow: 0 0 0 .2rem rgba(139, 46, 46, .15);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 575.98px) {
+    .tb-hero {
+        padding: 3rem 1rem;
+    }
+    .tb-hero h1 {
+        font-size: 2rem;
+    }
+}
